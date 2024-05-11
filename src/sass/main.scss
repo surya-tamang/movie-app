@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//variables for color
+
+$background: #e8eef9;
+$primary: #2f333c;
+$accent: #ec6d72;
+
+.container-fluid {
+    background-color: $background;
+}
+
+.search_bar {
+    position: relative;
+
+    input#search {
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            height: 1em;
+            width: 1em;
+            border-radius: 50em;
+            background: url("https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg") no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &:focus {
+            border: 2px solid $accent;
+        }
+
+        &:focus::-webkit-search-cancel-button {
+            opacity: 0.3;
+            pointer-events: all;
+        }
+    }
+
+}
+
+button {
+
+    border: 2px solid $accent;
+    transition: all 0.2s ease;
+
+    i {
+        font-size: 36px;
+        color: $accent;
+    }
+
+    &:hover {
+        background-color: $accent;
+    }
+
+    &:hover i {
+        color: $background;
+    }
+
+}
+
+button.watch_later {
+    border-color: $primary;
+
+    &:hover {
+        background-color: $primary;
+
+        i {
+            color: $background;
+        }
+    }
+
+    i {
+        color: $primary;
+    }
+}
+
+.movie_box {
+
+    &:hover .overlay {
+        bottom: 0;
+    }
+
+    .overlay {
+        bottom: -100%;
+        background-color: #2f333ca1;
+        color: $background;
+        transition: all 0.3s ease;
+    }
+}
+
+.watch_later_container {
+    z-index: 6;
+    height: 100%;
+    width: 30rem;
+    background-color: $primary;
+    right: 0;
+    top: -100%;
+    transition: all 0.2s ease;
+
+    li {
+        background-color: $background;
+    }
+}
+
+.slide_bottom {
+    top: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

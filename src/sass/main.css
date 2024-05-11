@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.container-fluid {
+  background-color: #e8eef9;
+}
+
+.search_bar {
+  position: relative;
+}
+.search_bar input#search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50em;
+  background: url("https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg") no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+.search_bar input#search:focus {
+  border: 2px solid #ec6d72;
+}
+.search_bar input#search:focus::-webkit-search-cancel-button {
+  opacity: 0.3;
+  pointer-events: all;
+}
+
+button {
+  border: 2px solid #ec6d72;
+  transition: all 0.2s ease;
+}
+button i {
+  font-size: 36px;
+  color: #ec6d72;
+}
+button:hover {
+  background-color: #ec6d72;
+}
+button:hover i {
+  color: #e8eef9;
+}
+
+button.watch_later {
+  border-color: #2f333c;
+}
+button.watch_later:hover {
+  background-color: #2f333c;
+}
+button.watch_later:hover i {
+  color: #e8eef9;
+}
+button.watch_later i {
+  color: #2f333c;
+}
+
+.movie_box:hover .overlay {
+  bottom: 0;
+}
+.movie_box .overlay {
+  bottom: -100%;
+  background-color: rgba(47, 51, 60, 0.631372549);
+  color: #e8eef9;
+  transition: all 0.3s ease;
+}
+
+.watch_later_container {
+  z-index: 6;
+  height: 100%;
+  width: 30rem;
+  background-color: #2f333c;
+  right: 0;
+  top: -100%;
+  transition: all 0.2s ease;
+}
+.watch_later_container li {
+  background-color: #e8eef9;
+}
+
+.slide_bottom {
+  top: 0;
+}
+
+/*# sourceMappingURL=main.css.map */

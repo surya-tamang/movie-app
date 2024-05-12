@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SearchBar from './components/SearchBar'
 import Movies from './components/MovieContainer';
 import WatchLater from './components/WatchLater';
+import Pagination from './components/Pagination';
 
 export default function App() {
   const [movies, setMovies] = useState([]);
@@ -61,6 +62,13 @@ export default function App() {
       <div className="w-full items-center gap-6">
         <Movies movies={movies} onWatchLaterClick={handleOnClick} />
       </div>
+
+      {/* ============== Pagination container ============ */}
+
+      <div className='w-full flex justify-center my-5'>
+        <Pagination />
+      </div>
+
 
     </>
   )
